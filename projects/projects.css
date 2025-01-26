@@ -21,7 +21,8 @@ body {
 .parent-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  justify-content: space-between;
+  min-height: 100svh;
 }
 
 nav {
@@ -38,12 +39,19 @@ nav {
   align-items: center;
 }
 
+.image-container {
+  width: 100%;
+  height: auto; /* Fixed height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .project-container {
   width: 100%;
   padding: 40px;
   padding-top: 0px;
 }
-
 
 .nav-container .logo span {
   font-size: 2rem;
@@ -56,7 +64,7 @@ nav {
   cursor: pointer;
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 20px;
   color: white;
   font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
   display: none;
@@ -123,7 +131,7 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 0px;
 }
 
 .project-card {
@@ -134,8 +142,8 @@ nav {
 
 .project-img {
   display: block;
-  margin: 30px auto;
-  width: 80%;
+  margin: auto;
+  width: 100%;
 }
 
 .project-title {
@@ -153,15 +161,12 @@ footer {
   text-align: center;
   padding: 20px;
   width: 100%;
-  height: 100%
-  grid-row: 8 / 9;
+  height: auto;
+  margin: 0;
+  margin-top: auto;
 }
 
-.ftr-container em {
-  margin: 10px 0 0 0;
-}
-
-@media (max-width: 884px) {
+@media (max-width: 1050px) {
   nav .logo {
     position: absolute;
     top: 16px;
@@ -175,10 +180,35 @@ footer {
   }
 
   #projects-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 
+  .nav-container .links {
+    display: none;
+  }
 
+  .hamburg,
+  .cancel {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  nav .logo {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    font-size: 1.5rem;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #projects-list {
+    grid-template-columns: 1fr;
+  }
 
   .nav-container .links {
     display: none;
