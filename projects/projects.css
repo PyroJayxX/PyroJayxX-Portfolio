@@ -99,15 +99,6 @@ nav {
   transition: 0.2s linear;
 }
 
-.skill_icons img {
-  height: 50px;
-  width: auto;
-}
-
-.devicon-devicon-plain {
-  max-width: 2em;
-}
-
 .dropdown a {
   display: flex;
   color: white;
