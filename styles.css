@@ -381,14 +381,3 @@ footer {
     display: none;
   }
 }
-
-@media (max-width: 440px) {
-  .main-container .image {
-    width: 70%;
-    height: 60%;
-  }
-
-  .main-container .content {
-    width: 80%;
-  }
-}
