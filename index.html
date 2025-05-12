@@ -9,41 +9,38 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="devicon.min.css">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="projects/projects.css" />
   <title>Edrill</title>
 </head>
 
 <body>
   <div class="parent-container">
-      <nav>
+      <nav style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #000000; border-bottom: 1px solid #78c7ff24;">
         <div class="nav-container">
           <div class="logo" data-aos="zoom-in-up" data-aos-duration="1500">
-            <span>edrøl</span>
+        <span>edrøl</span>
           </div>
           <div class="links">
-            <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-              <a href="">Home</a>
-            </div>
-            <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-              <a href="">About</a>
-            </div>
-            <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-              <a href="projects/projects.html">Projects</a>
-            </div>
-            <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
-              <a href="">Contact</a>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+          <a href="#main">Home</a>
+        </div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+          <a href="#projects-list">Projects</a>
+        </div>
+        <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100">
+            <a onclick="event.preventDefault(); navigator.clipboard.writeText('efbilan@gmail.com').then(() => { alert('Email address copied to clipboard: efbilan@gmail.com'); });">Contact</a> 
           </div>
         </div>
       </div>
       <i class="fa-solid fa-bars hamburg" onclick="hamburg()" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"></i>
       <div class="dropdown">
         <a href="">Home</a>
-        <a href="">About</a>
-        <a href="projects/projects.html">Projects</a>
-        <a href="">Contact</a> 
+        <a href="#projects-title">Projects</a>
+        <a onclick="event.preventDefault(); navigator.clipboard.writeText('efbilan@gmail.com').then(() => { alert('Email address copied to clipboard: efbilan@gmail.com'); });">Contact</a> 
         <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
       </div>
-    </nav>
-    <section>
+        </nav>
+    <section id="main">
       <div class="main-container">
           <div class="image" data-aos="zoom-in-left" data-aos-duration="1500" data-aos-delay="1800">
             <img src="me.png" alt="" />
@@ -60,18 +57,24 @@
           </p>
           <div class="skill_icons" data-aos="flip-up" data-aos-duration="1500" data-aos-delay="1100">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original-wordmark.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg" />
+
           </div>
           <div class="btn" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1700">
             <button onclick="contactMe()">
@@ -102,6 +105,79 @@
         </div>
       </div>
     </section>
+    <!-- Projects Content -->
+    <h1 id="projects-title" style="text-align:center; margin: 0px 0 30px 0; font-size:2.5rem;" data-aos="fade-down" data-aos-duration="1200">
+      Projects
+    </h1>
+  <div class="project-container">
+    <main id="projects-list">
+      <section class="project-card" data-aos="fade-up" data-aos-duration="1000">
+        <div class="image-container"><img class="project-img" src="public/Bilandog.png" alt="Bilandog E-Commerce Website"></div>
+        <div class="texts-card">
+          <h1 class="project-title">Bilandog E-Commerce Website</h1>
+          <p class="project-description">A full-stack project that I developed for a fictional e-commerce business utilizing React and Django framework.</p>
+          <div class="project-links">
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="image-container"><img class="project-img" src="public/FantasyFlip.png" alt="Fantasy Flip Mobile Card Game"></div>
+        <div class="texts-card">
+          <h1 class="project-title">Fantasy Flip Mobile Card Game</h1>
+          <p class="project-description">Lead developer for an android mobile game utilizing Android Studio and Firebase.</p>
+          <div class="project-links">
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="image-container"><img class="project-img" src="public/Blitz.png" alt="BlitzBall Game"></div>
+        <div class="texts-card">
+          <h1 class="project-title">BlitzBall Game x86 Assembly</h1>
+          <p class="project-description">Co-developer for dodgeball-inspired videogame built using x86 assembly language and DOSbox emulator.</p>
+          <div class="project-links">
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="project-card" data-aos="fade-up" data-aos-duration="1000">
+        <div class="image-container"><img class="project-img" src="public/PLMCRS.png" alt="PLM Irregular Enrollment System"></div>
+        <div class="texts-card">
+          <h1 class="project-title">PLM Irregular Enrollment System</h1>
+          <p class="project-description">Front-end developer and designer for school project PLM Irregular Enrollment System utilizing JavaFX and Figma.</p>
+          <div class="project-links">
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="image-container"><img class="project-img" src="public/SAP1.png" alt="Simple As Possible Computer"></div>
+        <div class="texts-card">
+          <h1 class="project-title">Simple As Possible (SAP1) Computer</h1>
+          <p class="project-description">Constructed the ALU for school project SAP1 computer that can add and subtract up to 8 binary digits made using IC chips and breadboard.</p>
+          <div class="project-links">
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="image-container"><img class="project-img" src="public/DOM.png" alt="DOM Programming Language"></div>
+        <div class="texts-card">
+          <h1 class="project-title">DOM Programming Language</h1>
+          <p class="project-description">Served as the back-end developer for the DOM programming language, focusing on lexical, syntax, and semantic analysis, as well as data handling from API endpoints.</p>
+          <div class="project-links">
+            <a href="#" class="project-btn">View Project</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
     
     <div>
       <footer>  

@@ -114,6 +114,7 @@ nav {
   grid-template-columns: 1fr 1fr;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 40px;
 }
 
 .main-container .image {
@@ -128,6 +129,104 @@ nav {
 .main-container .image img {
   width: 100%;
   padding-bottom: 20%;
+}
+
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 26px;
+  margin-bottom: 100px;
+}
+
+.project-card {
+  background-color: rgba(25, 25, 25, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 15px 20px 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.5);
+}
+
+.image-container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+.texts-card {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #cccccc;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Project buttons */
+.project-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.project-btn {
+  padding: 8px 20px;
+  background-color: rgb(0, 175, 255);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: 0.2s linear;
+}
+
+.project-btn:hover {
+  transform: scale(1.05);
+  color: rgb(0, 255, 255);
+  border: 2px solid rgb(0, 255, 255);
+  background-color: transparent;
+  box-shadow: 0 0 20px 2px rgb(0, 255, 255);
 }
 
 @keyframes animate {
@@ -315,6 +414,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100svh;
+    margin-top: 40px;
   }
 
   .nav-container .links {
@@ -379,5 +479,14 @@ footer {
 
   .main-container .image {
     display: none;
+  }
+
+  #projects-list {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-card {
+    max-width: 100%;
   }
 }
